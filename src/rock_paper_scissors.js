@@ -65,7 +65,6 @@ export class RockPaperScissors {
     }
 
     this.gameHistoryLog.push(` ${this.username} selected ${userSelection}. CPU selected ${cpuSelection}: ${this.username} ${results}s`);
-
   }
 
 }
