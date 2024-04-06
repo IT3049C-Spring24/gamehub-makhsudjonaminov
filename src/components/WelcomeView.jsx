@@ -21,10 +21,10 @@ const WelcomeView = ({userName, setUserName}) => {
             maxLength="15" />
         </div>
         <div className="view-btns">
-          <Link to="/8-react-rps-makhsudjonaminov/rps/play" className="btn btn-primary gbtn" id="start-game-button" type="button">
+          <Link to="/gamehub-makhsudjonaminov/rps/play" className="btn btn-primary gbtn" id="start-game-button" type="button">
             ▶️ Play Game 
           </Link>
-          <Link to="/8-react-rps-makhsudjonaminov/" className="btn btn-primary gbtn" id="start-game-button" type="button">
+          <Link to="/gamehub-makhsudjonaminov/" className="btn btn-primary gbtn" id="start-game-button" type="button">
             🔙 Home  
           </Link>
         </div>

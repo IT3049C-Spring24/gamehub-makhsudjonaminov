@@ -14,10 +14,10 @@ function App() {
     <div className="container">
       <div className="card">
            <Routes>
-              <Route path='/8-react-rps-makhsudjonaminov/' element={<Home/>} />
-              <Route path='/8-react-rps-makhsudjonaminov/rps' element={<RPS/>}/>
-              <Route path='/8-react-rps-makhsudjonaminov/tictac' element={<TicTac/>}/>
-              <Route path="/8-react-rps-makhsudjonaminov/rps/play" element={<GameView />} />
+              <Route path='/gamehub-makhsudjonaminov/' element={<Home/>} />
+              <Route path='/gamehub-makhsudjonaminov/rps' element={<RPS/>}/>
+              <Route path='/gamehub-makhsudjonaminov/tictac' element={<TicTac/>}/>
+              <Route path="/gamehub-makhsudjonaminov/rps/play" element={<GameView />} />
            </Routes>
       </div>
     </div>
