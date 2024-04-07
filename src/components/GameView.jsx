@@ -72,7 +72,7 @@ const GameView = ({userName}) => {
           <button className="btn btn-primary game-btn" id="play-button" type="button"  onClick={()=>userChooses(userChoice)}>
             Play
           </button>
-        <Link to="/gamehub-makhsudjonaminov/rps" className="btn btn-primary gbtn" id="play-button" type="button"  
+        <Link to="/rps/play" className="btn btn-primary gbtn" id="play-button" type="button"  
             onClick={()=>{
               setUserScore(0),
               setCpuScore(0),

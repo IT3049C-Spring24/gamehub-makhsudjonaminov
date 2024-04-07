@@ -89,7 +89,7 @@ export default function TicTac() {
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
       <div className='btn-home'>
-        <Link to="/8-react-rps-makhsudjonaminov/"> 🔙Home</Link>
+        <Link to="/"> 🔙Home</Link>
         </div>
       <div className="game-info">
         <ol>{moves}</ol>
