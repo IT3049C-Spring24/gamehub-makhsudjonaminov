@@ -21,7 +21,7 @@ const WelcomeView = ({userName, setUserName}) => {
             maxLength="15" />
         </div>
         <div className="view-btns">
-          <Link to="/rps" className="btn btn-primary gbtn" id="start-game-button" type="button">
+          <Link to="/rps/play" className="btn btn-primary gbtn" id="start-game-button" type="button">
             ▶️ Play Game 
           </Link>
           <Link to="/" className="btn btn-primary gbtn" id="start-game-button" type="button">
