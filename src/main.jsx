@@ -1,24 +1,23 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from '../Routes/HomePage.jsx';
+import Navigation from '../Components/Navigation';
 import './index.css'
-import { BrowserRouter } from 'react-router-dom'
+import App from './App';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <BrowserRouter>
-       <App />
-    </BrowserRouter>
-  </React.StrictMode>,
-)
+const Main = () => {
+  return (
+    <Router>
+      <div>
+        <Navigation />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+        </Switch>
+      </div>
+    </Router>
+  );
+};
 
-// import React from 'react'
-// import ReactDOM from 'react-dom/client'
-// import App from './App.jsx'
-// import './index.css'
-
-// ReactDOM.createRoot(document.getElementById('root')).render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-// )
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);

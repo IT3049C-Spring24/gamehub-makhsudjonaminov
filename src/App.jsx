@@ -1,53 +1,26 @@
-import {useState} from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './App.css';
+import Navigation from '../Components/Navigation'
+import HomePage from '../Routes/HomePage';
+import RPSPage from '../Routes/RPSPage';
+import TicTacToePage from '../Routes/TicTacToePage';
+import SnakeGame from '../Routes/SnakeGame';
+import Wordle from '../Routes/Wordle';
 
-import WelcomeView from './components/WelcomeView';
-import GameView from './components/GameView';
-import "./App.css"
-import { Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import RPS from './pages/RockPS';
-import TicTac from './pages/TicTac';
 function App() {
- 
 
   return (
-    <div className="container">
-      <div className="card">
-           <Routes>
-              <Route path='/' element={<Home/>} />
-              <Route path='/rps' element={<RPS/>}/>
-              <Route path='/tictac' element={<TicTac/>}/>
-              <Route path="/rps/play" element={<GameView />} />
-           </Routes>
-      </div>
-    </div>
-  );
+    <Router basename='/rps-react'>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/Rps" element={<RPSPage />} />
+        <Route path="/TicTacToe" element={<TicTacToePage />} />
+        <Route path="/Snake" element={<SnakeGame />} />
+        <Route path="/Wordle" element={<Wordle />} />
+      </Routes>
+    </Router>
+  )
 }
+
 export default App
-
-
-// import { useState } from 'react'
-// import './App.css'
-// import { WelcomeScreen as Welcome } from './screens/WelcomeScreen'
-// import Game from './screens/GameScreen'
-
-// function App() {
-//   const [name, setName] = useState(`Bearcat`)
-//   const [gameStarted, setGameStarted] = useState(false)
-
-//   return (
-//     <>
-//       <div>
-//           {/* <img src={reactLogo} className="logo react" alt="React logo" /> */}
-//           <h1>Rock Paper Scissors</h1> 
-//       </div>
-//       {
-//         gameStarted
-//         ? <Game name={name}/>
-//         : <Welcome name={name} onNameChange={setName} onGameStart={() => setGameStarted(true)}/>
-//       }
-//     </>
-//   )
-// }
-
-// export default App
